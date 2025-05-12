@@ -1,3 +1,5 @@
+const User = require("../models/user.js");
+
 module.exports.renderSignupForm = (req,res)=>{
     res.render("users/signup.ejs");
 }
@@ -12,7 +14,7 @@ module.exports.signup = async (req,res)=>{
             if(err){
                 return next(err);
             }
-            req.flash("success", "Welcome to Wandelust");
+            req.flash("success", "Welcome to Wanderlust");
             res.redirect("/listings");
         });
     }
