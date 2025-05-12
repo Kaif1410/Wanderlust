@@ -36,6 +36,16 @@ store.on("error", ()=>{
     console.log("ERROR in MONGO SESSION STORE", err);
 })
 
+main().then(() => {
+    console.log("connected to DB");
+}).catch((err) => {
+    console.log(err);
+})
+
+async function main() {
+    await mongoose.connect(dburl);
+}
+
 const sessionOptions = {
     store,
     secret: process.env.SECRET,
@@ -65,16 +75,6 @@ app.use(express.static(path.join(__dirname, "/public")));
 // app.use(cookieParser());
 
 const port = 8080;
-
-main().then(() => {
-    console.log("connected to DB");
-}).catch((err) => {
-    console.log(err);
-})
-
-async function main() {
-    await mongoose.connect(dburl);
-}
 
 
 // app.get("/", (req, res) => {
