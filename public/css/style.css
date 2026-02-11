@@ -142,7 +142,7 @@ body {
         width: 92vw;
     }
 
-    .card {
+    .card, .msg, .respnsv-review  {
         margin-left: 0% !important;
         width: 100% !important;
     }
@@ -155,9 +155,8 @@ body {
         margin-left: 0 !important;
     }
 
-    .msg {
-        margin-left: 0 !important;
-        width: 100% !important;
+    .review-box {
+        width: 100%;
     }
 }
 

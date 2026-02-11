@@ -42,7 +42,7 @@
         </div>
         <% } %>
 
-          <div class="col-8 offset-3 mb-3">
+          <div class="col-8 offset-3 mb-3 respnsv-review">
             <% if(currUser) { %>
               <hr>
               <h4>Leave a Review</h4>
@@ -74,30 +74,31 @@
                 <button class="btn btn-outline-dark">Submit</button>
               </form>
               <hr>
-              <% } %>
+            <% } %>
 
-                <% if(listing.reviews.length> 0) { %>
-                  <div class="row">
-                    <p><b>>All Reviews</b></p>
-                    <% for(review of listing.reviews) { %>
-                      <div class="card col-5 ms-3 mb-3">
-                        <div class="card-body">
-                          <h5 class="card-title">@<%= review.author.username %>
-                          </h5>
-                          <p class="starability-result card-text" data-rating=<%=review.rating %>></p>
-                          <p class="card-text">
-                            <%= review.comment %>
-                          </p>
-                        </div>
+            <% if(listing.reviews.length> 0) { %>
+                <div class="row review-box">
+                  <p><b>>All Reviews</b></p>
+                  <% for(review of listing.reviews) { %>
+                    <div class="card col-5 ms-3 mb-3">
+                      <div class="card-body">
+                        <h5 class="card-title">@<%= review.author.username %></h5>
+                        <p class="starability-result card-text" data-rating=<%=review.rating %>></p>
+                        <p class="card-text mb-3">
+                          <%= review.comment %>
+                        </p>
+                      </div>
+                      <% if(currUser) { %>
                         <form method="POST"
                           action="/listings/<%= listing._id %>/reviews/<%= review._id %>?_method=DELETE"
                           class="mb-3 mt-3">
                           <button class="btn btn-sm btn-dark">Delete</button>
                         </form>
-                      </div>
                       <% } %>
-                  </div>
+                    </div>
                   <% } %>
+                </div>
+              <% } %>
           </div>
           <div class="col-8 offset-3 mb-3 map">
             <h3>Where you'll be</h3>

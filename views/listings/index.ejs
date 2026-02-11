@@ -1,50 +1,53 @@
 <% layout("/layouts/boilerplate") %>
 
   <!-- <h3>All Listings</h3> -->
-  <div id="filters">
-    <div class="filter">
-      <i class="fa-solid fa-fire"></i>
-      <p>Trending</p>
-    </div>
-    <div class="filter">
-      <i class="fa-solid fa-bed"></i>
-      <p>Rooms</p>
-    </div>
-    <div class="filter">
-      <i class="fa-solid fa-mountain-city"></i>
-      <p>Iconic cities</p>
-    </div>
-    <div class="filter">
-      <i class="fa-solid fa-mountain"></i>
-      <p>Mountain</p>
-    </div>
-    <div class="filter">
-      <i class="fa-brands fa-fort-awesome"></i>
-      <p>Castles</p>
-    </div>
-    <div class="filter">
-      <i class="fa-solid fa-person-swimming"></i>
-      <p>Amazing Pools</p>
-    </div>
-    <div class="filter">
-      <i class="fa-solid fa-campground"></i>
-      <p>Camping</p>
-    </div>
-    <div class="filter">
-      <i class="fa-solid fa-cow"></i>
-      <p>Farms</p>
-    </div>
-    <div class="filter">
-      <i class="fa-solid fa-snowflake"></i>
-      <p>Arctic</p>
-    </div>
-    <div class="filter">
-      <i class="fa-solid fa-igloo"></i>
-      <p>Domes</p>
-    </div>
-    <div class="filter">
-      <i class="fa-solid fa-ship"></i>
-      <p>Boats</p>
+
+  <div class="cat-container">
+    <div id="filters">
+      <div class="filter">
+        <i class="fa-solid fa-fire"></i>
+        <p>Trending</p>
+      </div>
+      <div class="filter">
+        <i class="fa-solid fa-bed"></i>
+        <p>Rooms</p>
+      </div>
+      <div class="filter">
+        <i class="fa-solid fa-mountain-city"></i>
+        <p>Iconic cities</p>
+      </div>
+      <div class="filter">
+        <i class="fa-solid fa-mountain"></i>
+        <p>Mountain</p>
+      </div>
+      <div class="filter">
+        <i class="fa-brands fa-fort-awesome"></i>
+        <p>Castles</p>
+      </div>
+      <div class="filter">
+        <i class="fa-solid fa-person-swimming"></i>
+        <p>Amazing Pools</p>
+      </div>
+      <div class="filter">
+        <i class="fa-solid fa-campground"></i>
+        <p>Camping</p>
+      </div>
+      <div class="filter">
+        <i class="fa-solid fa-cow"></i>
+        <p>Farms</p>
+      </div>
+      <div class="filter">
+        <i class="fa-solid fa-snowflake"></i>
+        <p>Arctic</p>
+      </div>
+      <div class="filter">
+        <i class="fa-solid fa-igloo"></i>
+        <p>Domes</p>
+      </div>
+      <div class="filter">
+        <i class="fa-solid fa-ship"></i>
+        <p>Boats</p>
+      </div>
     </div>
 
     <div class="tax-toggle">
@@ -55,12 +58,6 @@
     </div>
   </div>
 
-  <div class="tax-toggle resp">
-    <div class="form-check-reverse form-switch">
-      <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
-      <label class="form-check-label" for="switchCheckDefault">Desplay total after taxes</label>
-    </div>
-  </div>
 
   <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3">
     <% for(let listing of allListing){ %>
